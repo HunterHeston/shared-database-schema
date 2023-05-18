@@ -1,0 +1,24 @@
+{
+  "name": "shared-databas-schema",
+  "version": "1.0.0",
+  "description": "Shared database schema for Hunter Heston's personal projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HunterHeston/shared-database-schema.git"
+  },
+  "keywords": [
+    "prisma",
+    "database",
+    "schema"
+  ],
+  "author": "Hunter Heston",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HunterHeston/shared-database-schema/issues"
+  },
+  "homepage": "https://github.com/HunterHeston/shared-database-schema#readme"
+}
