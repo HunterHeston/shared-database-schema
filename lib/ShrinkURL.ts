@@ -66,6 +66,22 @@ export async function getShrinkURLBySlug(
       };
     }
 
+    // increment visit counter, don't block on this
+    // it's okay if this fails, it's not a critical operation
+    // just log the error and continue
+    prisma.shrinkURL
+      .update({
+        where: {
+          slug: slug,
+        },
+        data: {
+          visits: result.visits + 1,
+        },
+      })
+      .catch((error) => {
+        console.error("Error incrementing visit counter: ", error);
+      });
+
     return {
       status: ErrorStatus.OK,
       url: result.url,
