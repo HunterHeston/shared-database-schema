@@ -55,3 +55,13 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+// Shrink Models
+model ShrinkURL {
+  id        String   @id @default(cuid())
+  url       String
+  slug      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  visits    Int      @default(0)
+}
